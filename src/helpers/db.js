@@ -25,17 +25,41 @@ const exercisesSchema = {
   "required": [ "name", "units", "_id" ],
 };
 
+const logsSchema = {
+  "title": "logs schema",
+  "version": 0,
+  "description": "Schema for the logs collection",
+  "type": "object",
+  "properties": {
+    "_id": {
+      "type": "string",
+      "primary": true
+    },
+    "exerciseId": {
+      "type": "string",
+    },
+    "qty": {
+      "type": "number"
+    },
+  },
+  "required": [ "name", "units", "_id" ],
+};
+
 async function initDb() {
   try {
     const db = await createRxDatabase( {
-      name: 'grease', // <- name
-      adapter: 'idb', // <- storage-adapter
+      name: 'grease',
+      adapter: 'idb',
     } );
     const Exercises = await db.collection( {
       name: 'exercises',
       schema: exercisesSchema,
     } )
-    return { Exercises };
+    const Logs = await db.collection( {
+      name: 'logs',
+      schema: logsSchema,
+    } )
+    return { Exercises, Logs };
   } catch ( err ) {
     throw new Error(err);
   }

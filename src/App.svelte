@@ -21,7 +21,7 @@
 	});
 </script>
 
-<main class="p-4 mx-auto max-w-xl">
+<main class="p-6 mx-auto max-w-xl">
 	{#await db then cols}
 		<ExerciseManager {exercises} Exercises={cols.Exercises} />
 

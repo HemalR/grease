@@ -1,11 +1,6 @@
 <script>
-	export let Exercises;
-	let exercises = [];
-	const query = Exercises.find();
-	query.$.subscribe((results) => {
-		exercises = results.map((res) => res.get());
-		console.log(exercises);
-	});
+	export let Logs;
+	export let exercises;
 
 	// const getExercises = Exercises.allDocs({
 	// 	include_docs: true,

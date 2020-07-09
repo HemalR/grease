@@ -1,6 +1,7 @@
 import { createRxDatabase, addRxPlugin } from 'rxdb'; // RxDatabase
 import pouchDbAdapter from 'pouchdb-adapter-idb';
 import { RxDBValidatePlugin } from 'rxdb/plugins/validate';
+import { createLogId } from './id';
 
 addRxPlugin(pouchDbAdapter);
 addRxPlugin( RxDBValidatePlugin );
@@ -42,7 +43,7 @@ const logsSchema = {
       "type": "number"
     },
   },
-  "required": [ "name", "units", "_id" ],
+  "required": [ "_id", "exerciseId", "qty" ],
 };
 
 async function initDb() {
@@ -64,5 +65,11 @@ async function initDb() {
     throw new Error(err);
   }
 };
+
+const createSkeletonLog = (exerciseId ) => ({
+    _id: createLogId(),
+    exerciseId,
+    qty: ''
+    })
   
-export {initDb}
+export {initDb, createSkeletonLog}

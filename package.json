@@ -1,5 +1,5 @@
 {
-  "name": "svelte-app",
+  "name": "grease",
   "version": "1.0.0",
   "scripts": {
     "watch:tailwind": "postcss public/tailwind.css -o public/index.css -w",
@@ -20,6 +20,7 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-svelte3": "^2.7.3",
+    "lodash": "^4.17.15",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.1",
     "pouchdb-adapter-idb": "^7.2.1",

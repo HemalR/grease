@@ -1,20 +1,7 @@
-# Todo:
+# Privacy Policy:
 
-1. Organise code
-  * 
+All data is kept locally on your browser, this extension does not collect anything from your computer. 
 
-## UI:
+As such, clearing your browser history will also delete all your data - please be mindful of this.
 
-1. Footer
-  * Feedback
-  * Donate
-  * Manage exercises
-2. Main input
-  * Props needed - exercises collection
-  * Loop over each and display as a form
-3. Exercise manager
-  * List all current exercises
-  * A way to hide/unhide them
-  * A way to add new exercises
-  * A way to delete exercises
-4. Stats
+The source code of this extension is open source - https://github.com/HemalR/grease

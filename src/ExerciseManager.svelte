@@ -55,6 +55,11 @@
 			</button>
 		</form>
 	{:else}
-		<button class="w-full text-teal-600 border rounded border-dashed border-teal-600 p-4" on:click|preventDefault={() => (adding = true)} type="button">Add new</button>
+		<button
+			class="w-full text-teal-600 border rounded border-dashed border-teal-600 p-4"
+			on:click|preventDefault={() => (adding = true)}
+			type="button">
+			Add new
+		</button>
 	{/if}
 </div>

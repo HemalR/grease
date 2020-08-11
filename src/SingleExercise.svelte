@@ -33,7 +33,7 @@
 	const handleDelete = async () => {
 		ex.remove();
 		const exLogs = Logs.find().where('exerciseId').eq(ex._id);
-		await exLogs.remove()
+		await exLogs.remove();
 		isMenuOpen = false;
 	};
 
@@ -146,7 +146,9 @@
 				<div
 					class="menu absolute bg-white rounded shadow-lg border border-solid border-gray-200 right-0 transform
 					-translate-x-1/2 mt-3 w-32">
-					<button class="text-teal-700 hover:text-teal-900 text-lg flex py-2 px-4 focus:outline-none" on:click={handleDelete}>
+					<button
+						class="text-teal-700 hover:text-teal-900 text-lg flex py-2 px-4 focus:outline-none"
+						on:click={handleDelete}>
 						<svg viewBox="0 0 20 20" fill="currentColor" class="trash mr-3 w-6 h-6">
 							<path
 								fill-rule="evenodd"

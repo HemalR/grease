@@ -4,7 +4,6 @@
 	import forOwn from 'lodash/forOwn';
 	import { initDb } from './helpers/db';
 	import ExerciseManager from './ExerciseManager.svelte';
-	import ExerciseLogger from './ExerciseLogger.svelte';
 	import Stats from './Stats.svelte';
 	import SingleExercise from './SingleExercise.svelte';
 
@@ -39,7 +38,7 @@
 	});
 </script>
 
-<main class="bg-teal-800">
+<main class="bg-teal-800 min-h-screen">
 	<div class="p-6 mx-auto max-w-3xl">
 		{#await db then cols}
 			<!-- <ExerciseLogger Logs={cols.Logs} Exercises={cols.Exercises} {exercises} {logs} /> -->

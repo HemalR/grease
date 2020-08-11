@@ -1,10 +1,13 @@
 import { createRxDatabase, addRxPlugin } from 'rxdb'; // RxDatabase
 import pouchDbAdapter from 'pouchdb-adapter-idb';
 import { RxDBValidatePlugin } from 'rxdb/plugins/validate';
+import { RxDBQueryBuilderPlugin } from 'rxdb/plugins/query-builder';
+
 import { createLogId } from './id';
 
 addRxPlugin(pouchDbAdapter);
 addRxPlugin( RxDBValidatePlugin );
+addRxPlugin( RxDBQueryBuilderPlugin );
 
 const exercisesSchema = {
   "title": "exercises schema",
